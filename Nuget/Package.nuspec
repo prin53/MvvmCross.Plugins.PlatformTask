@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<package >
+    <metadata>
+        <id>Prin53.MvvmCross.Plugins.PlatformTask</id>
+        <version>1.0.5</version>
+        <authors>Denys Fiediaiev</authors>
+        <owners>Denys Fiediaiev</owners>
+        <licenseUrl>https://github.com/Prin53/MvvmCross.Plugins.PlatformTask/blob/master/LICENSE</licenseUrl>
+        <projectUrl>https://github.com/Prin53/MvvmCross.Plugins.PlatformTask</projectUrl>
+        <iconUrl>http://imgur.com/a/S3ZJy</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>MVVMCross Plugin that wraps iOS BackgroundTask API</description>
+        <releaseNotes>Plugin issues fixed.</releaseNotes>
+        <copyright>Denys Fiediaiev 2016</copyright>
+        <tags>MVVMCross Xamarin iOS BackgroundTask</tags>
+        <dependencies>
+            <dependency id="MvvmCross.Platform" version="4.3.0" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="..\MvvmCross.Plugins.PlatformTask\**\*.cs" target="src\MvvmCross.Plugins.PlatformTask" />
+        <file src="..\MvvmCross.Plugins.PlatformTask.Droid\**\*.cs" target="src\MvvmCross.Plugins.PlatformTask.Droid" />
+        <file src="..\MvvmCross.Plugins.PlatformTask.iOS\**\*.cs" target="src\MvvmCross.Plugins.PlatformTask.iOS" />
+
+        <!-- PCL -->
+        <file src="..\MvvmCross.Plugins.PlatformTask\bin\Release\MvvmCross.Plugins.PlatformTask.*" target="lib\portable-net45+win+wpa81+wp80" />
+
+        <!-- dotnet -->
+        <file src="..\MvvmCross.Plugins.PlatformTask\bin\Release\MvvmCross.Plugins.PlatformTask.*" target="lib\dotnet" />
+
+        <!-- droid -->
+        <file src="..\MvvmCross.Plugins.PlatformTask\bin\Release\MvvmCross.Plugins.PlatformTask.*" target="lib\MonoAndroid" />
+        <file src="..\MvvmCross.Plugins.PlatformTask.Droid\bin\Release\MvvmCross.Plugins.PlatformTask.Droid.*" target="lib\MonoAndroid" />
+        <file src="BootstrapContent\PlatformTaskPluginBootstrap.cs.pp" target="content\MonoAndroid\Bootstrap\PlatformTaskPluginBootstrap.cs.pp" />
+
+        <!-- iOS -->
+        <file src="..\MvvmCross.Plugins.PlatformTask\bin\Release\MvvmCross.Plugins.PlatformTask.*" target="lib\Xamarin.iOS10" />
+        <file src="..\MvvmCross.Plugins.PlatformTask.iOS\bin\Release\MvvmCross.Plugins.PlatformTask.iOS.*" target="lib\Xamarin.iOS10" />
+        <file src="iOSBootstrapContent\PlatformTaskPluginBootstrap.cs.pp" target="content\Xamarin.iOS10\Bootstrap\PlatformTaskPluginBootstrap.cs.pp" />
+    </files>
+</package>
